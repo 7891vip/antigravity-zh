@@ -41,19 +41,38 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 | 无障碍 | `placeholder` / `title` / `aria-label` / `aria-description` 等属性一并翻译 |
 | 安全隔离 | 主动跳过代码编辑器、`pre/code`、终端、可编辑输入框，不污染代码与输入 |
 | 可还原 | 安装时自动备份官方 `app.asar`，一条命令还原 |
-| 零依赖 | 装机端只需 PowerShell 5.1（系统自带），不需要 Python / Node |
+| 零依赖 | 单文件 exe 版不依赖 PowerShell / Python；脚本版只需系统自带 PowerShell 5.1 |
 | 更新自愈 | 客户端自动更新后重新运行安装脚本即可，脚本会自动识别新官方版本 |
 
 ## 快速开始
 
-### 方式一：下载发布包（推荐）
+### 方式一：单文件 exe（推荐，零依赖）
+
+1. 到 [Releases](../../releases) 下载 `Antigravity-ZH-Installer.exe`（约 6.3 MB，汉化文件已内嵌，不需要 PowerShell / Python）。
+2. 双击运行，程序会自动定位 Antigravity 并显示当前状态（已汉化 / 官方原版 / 已备份）。
+3. 点「安装 / 更新汉化」，剩下的关闭客户端、备份、写入、重启全自动完成。
+
+![汉化工具](screenshots/12-installer.png)
+
+也支持命令行静默执行（便于脚本或批量部署）：
+
+| 参数 | 作用 |
+| --- | --- |
+| `--install` | 静默安装 / 更新汉化 |
+| `--restore` | 静默还原官方英文 |
+| `--status` | 只检测状态 |
+| `--help` | 显示帮助 |
+
+日志写入 `%TEMP%\antigravity-zh.log`。
+
+### 方式二：脚本版（zip）
 
 1. 到 [Releases](../../releases) 下载 `Antigravity-zh-CN-v1.0.0.zip`。
 2. **完整解压**（不要只把 `.cmd` 拖出来）。
 3. 双击 `安装汉化.cmd`，脚本会自动关闭客户端 → 备份 → 写入 → 重启。
 4. 界面即为简体中文。
 
-### 方式二：直接用本仓库
+### 方式三：直接用本仓库
 
 ```powershell
 git clone https://github.com/<your-name>/antigravity-zh.git
@@ -136,6 +155,7 @@ antigravity-zh/
 │  ├─ install.ps1
 │  ├─ 还原英文.cmd
 │  └─ uninstall.ps1
+├─ src/exe/              单文件安装器（C# 源码、图标、build.ps1）
 ├─ dist/                 已构建产物
 │  ├─ app.zh.asar        汉化后的 app.asar（约 6.3 MB）
 │  └─ manifest.json      版本与 SHA256 校验
