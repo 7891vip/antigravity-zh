@@ -1,5 +1,16 @@
 # 更新日志
 
+## v1.0.0 新增 — 单文件安装器
+
+新增 `Antigravity-ZH-Installer.exe`（6.3 MB，C# / .NET Framework 4.x 编译）：
+
+- 汉化文件内嵌，双击即用，不需要 PowerShell 或 Python
+- 图形界面显示安装目录、当前状态（已汉化 / 官方原版 / 未知版本）、备份状态
+- 一键「安装 / 更新汉化」「还原英文」「打开安装目录」
+- 写入后自动做 SHA256 校验，失败会明确报错
+- 支持 `--install` / `--restore` / `--status` 静默参数
+- 启动客户端时剔除 `ELECTRON_RUN_AS_NODE`，避免从 Electron 系终端启动时客户端秒退
+
 ## v1.0.0 — 2026-11-22
 
 首个公开版本。
