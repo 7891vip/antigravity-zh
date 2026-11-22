@@ -1,0 +1,17 @@
+# 二进制文件不做文本 diff / EOL 归一化
+*.asar binary
+*.zip  binary
+*.png  binary
+*.ico  binary
+
+# Windows 脚本保持 CRLF，避免 PowerShell 解析异常
+*.ps1  text eol=crlf
+*.cmd  text eol=crlf
+*.bat  text eol=crlf
+
+# 其余文本统一 LF 存储（工作区仍按平台检出）
+*.md   text eol=lf
+*.json text eol=lf
+*.py   text eol=lf
+*.js   text eol=lf
+*.yml  text eol=lf
