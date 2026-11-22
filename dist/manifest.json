@@ -1,0 +1,13 @@
+﻿{
+    "name":  "Antigravity 简体中文汉化包",
+    "version":  "1.0.0",
+    "author":  "built for 寿司",
+    "appVersion":  "2.34.0",
+    "builtAt":  "2026-11-22 22:45:07",
+    "sourceAsarSha256":  "8934adef0622c9271c92eea950a71848764a66f7b10023ccbd82e54b959adb0e",
+    "sourceAsarSize":  6720053,
+    "packAsarSha256":  "5547fbc004950902aec69542dba4b699d11ce0d63da75109c6c9b52457720098",
+    "packAsarSize":  6582225,
+    "dictEntries":  1887,
+    "note":  "若客户端自动更新后界面变回英文，请重新运行 安装汉化.cmd"
+}

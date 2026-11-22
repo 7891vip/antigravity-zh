@@ -1,0 +1,13 @@
+{
+  "Modify permissions for file, terminal, and MCP tools.": "修改文件、终端和 MCP 工具的权限。",
+  "Configure default behaviors, skills, and MCP tools.": "配置默认行为、技能和 MCP 工具。",
+  "Remote Control Issue": "远程控制问题",
+  "Configure where and how the agent may use the built-in browser.": "配置智能体使用内置浏览器的位置和方式。",
+  "Choose how the agent interacts with files and the terminal.": "选择智能体与文件和终端的交互方式。",
+  "Manage the plugins and skills available to the agent.": "管理智能体可用的插件和技能。",
+  "Configure automatic updates and app behavior.": "配置自动更新和应用行为。",
+  "Choose your preferred language and region.": "选择你偏好的语言和区域。",
+  "Set the app's appearance, theme, and layout.": "设置应用的外观、主题与布局。",
+  "Configure notifications and sounds.": "配置通知与声音。",
+  "Manage your account, plan, and billing.": "管理你的账号、方案和账单。"
+}

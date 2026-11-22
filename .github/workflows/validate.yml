@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  dict:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 校验词典与句式规则
+        run: python tools/validate_dict.py
+      - name: 检查引擎占位符
+        run: |
+          python - <<'PY'
+          import pathlib, sys
+          body = pathlib.Path("src/engine_body.js").read_text(encoding="utf-8")
+          need = ["var dict = DICT;", "var RULES = __RULES__;"]
+          missing = [n for n in need if n not in body]
+          print("engine_body.js: %d 字符" % len(body))
+          if missing:
+              print("缺少占位符:", missing)
+              sys.exit(1)
+          print("占位符完好。")
+          PY
