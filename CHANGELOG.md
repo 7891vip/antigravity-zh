@@ -32,3 +32,13 @@
 - 仅提供 Windows 安装脚本（asar 结构跨平台通用）
 - 模型名、插件内部标识、键名、原生菜单栏保持英文
 - 客户端升级后需要重新运行安装脚本
+
+## v1.0.0 修订 — 2026-11-22（同日重新构建）
+
+补充「模型与用量」页面的服务器下发文案，词典 1887 → 1907 条、规则 42 → 45 条：
+
+- `Weekly / Daily / Monthly / Five Hour Limit Remaining` 系列
+- 免费额度说明（`Free users and Google AI Plus users receive the minimum base limits…`）
+- `Gemini Models`、`Claude and GPT models`、`See Activity`、`Get More AI Credits`
+- 规则：`Resets in <n>` → `<n> 后重置`
+
