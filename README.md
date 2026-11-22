@@ -35,7 +35,7 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 
 | 项目 | 说明 |
 | --- | --- |
-| 词条规模 | **1887 条**人工整理词典 + **43 条**动态句式规则 |
+| 词条规模 | **1907 条**人工整理词典 + **45 条**动态句式规则 |
 | 覆盖界面 | 侧边栏、对话列表、项目、输入框、模型选择器、设置全部页签、权限/工具/网络规则、插件市场、弹窗与 tooltip |
 | 动态内容 | 问候语（带用户名）、相对时间、数量单位、快捷键说明、`Delete "x"?` 之类模板句 |
 | 无障碍 | `placeholder` / `title` / `aria-label` / `aria-description` 等属性一并翻译 |
@@ -56,7 +56,7 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 ### 方式二：直接用本仓库
 
 ```powershell
-git clone https://github.com/7891vip/antigravity-zh.git
+git clone https://github.com/<your-name>/antigravity-zh.git
 cd antigravity-zh\installer
 .\安装汉化.cmd
 ```
@@ -143,7 +143,7 @@ antigravity-zh/
 │  ├─ build.py           asar 解析 / 重打包
 │  ├─ engine_body.js     DOM 翻译引擎
 │  ├─ rules.json         动态句式规则
-│  └─ dict/p1..p7.json   词典（1887 条）
+│  └─ dict/p1..p7.json   词典（1907 条）
 ├─ tools/                CDP 验证工具
 ├─ docs/说明.txt         面向普通用户的中文说明
 └─ screenshots/          效果截图
@@ -194,7 +194,7 @@ A：脚本目前只写了 Windows 路径探测；asar 结构相同，`build.py` 
 
 Community Simplified-Chinese localization for the **Google Antigravity** desktop client (Windows).
 
-The app ships an English-only web UI with no i18n hooks, so this project injects a runtime DOM translation engine into the renderer preload inside `resources/app.asar` — 1,887 hand-curated entries plus 43 regex rules, with code/terminal/editor areas explicitly skipped.
+The app ships an English-only web UI with no i18n hooks, so this project injects a runtime DOM translation engine into the renderer preload inside `resources/app.asar` — 1,907 hand-curated entries plus 45 regex rules, with code/terminal/editor areas explicitly skipped.
 
 **Install:** unzip a release, double-click `安装汉化.cmd` (install) or `还原英文.cmd` (restore).
 **After an app update:** run the installer again.
