@@ -28,14 +28,14 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 本项目逆向其 Electron 主进程结构后，在 `resources/app.asar` 的渲染进程 preload 末尾注入一段**运行时 DOM 翻译引擎**，配合人工整理的词典与句式规则，把界面文案实时替换为简体中文。
 
 - 适用平台：Windows（10/11）
-- 测试版本：Antigravity `2.34.0`（Electron `44.9.1` / Chrome `152`）
-- 汉化包版本：`v1.0.0`（2026-11-22）
+- 测试版本：Antigravity `2.35.2`（Electron `44.9.1`）
+- 汉化包版本：`v1.0.2`（2026-11-26）
 
 ## 特性
 
 | 项目 | 说明 |
 | --- | --- |
-| 词条规模 | **1907 条**人工整理词典 + **45 条**动态句式规则 |
+| 词条规模 | **1961 条**人工整理词典 + **58 条**动态句式规则 |
 | 覆盖界面 | 侧边栏、对话列表、项目、输入框、模型选择器、设置全部页签、权限/工具/网络规则、插件市场、弹窗与 tooltip |
 | 动态内容 | 问候语（带用户名）、相对时间、数量单位、快捷键说明、`Delete "x"?` 之类模板句 |
 | 无障碍 | `placeholder` / `title` / `aria-label` / `aria-description` 等属性一并翻译 |
@@ -46,28 +46,28 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 
 ## 快速开始
 
-### 方式一：单文件 exe（推荐，零依赖）
+### 方式一：双击 .bat（推荐，零依赖）
 
-1. 到 [Releases](../../releases) 下载 `Antigravity-ZH-Installer.exe`（约 6.3 MB，汉化文件已内嵌，不需要 PowerShell / Python）。
-2. 双击运行，程序会自动定位 Antigravity 并显示当前状态（已汉化 / 官方原版 / 已备份）。
-3. 点「安装 / 更新汉化」，剩下的关闭客户端、备份、写入、重启全自动完成。
+1. 到 [Releases](../../releases) 下载 `Antigravity-一键汉化-v1.0.2.zip`，**完整解压**（不要把 .bat 单独拖出来）。
+2. 双击 `一键汉化.bat`，菜单里选 `1` 即安装 / 更新汉化，选 `2` 还原英文。
+3. 脚本自动定位安装目录、关闭客户端、备份官方文件、写入、校验、重启，全程无需 PowerShell / Python。
 
-![汉化工具](screenshots/12-installer.png)
+![一键汉化](screenshots/12-installer.png)
 
 也支持命令行静默执行（便于脚本或批量部署）：
 
 | 参数 | 作用 |
 | --- | --- |
-| `--install` | 静默安装 / 更新汉化 |
-| `--restore` | 静默还原官方英文 |
-| `--status` | 只检测状态 |
-| `--help` | 显示帮助 |
+| `一键汉化.bat install` | 命令行直接安装 / 更新（不弹菜单） |
+| `一键汉化.bat restore` | 命令行直接还原英文 |
+
+
 
 日志写入 `%TEMP%\antigravity-zh.log`。
 
 ### 方式二：脚本版（zip）
 
-1. 到 [Releases](../../releases) 下载 `Antigravity-zh-CN-v1.0.0.zip`。
+1. 到 [Releases](../../releases) 下载 `Antigravity-一键汉化-v1.0.2.zip`。
 2. **完整解压**（不要只把 `.cmd` 拖出来）。
 3. 双击 `安装汉化.cmd`，脚本会自动关闭客户端 → 备份 → 写入 → 重启。
 4. 界面即为简体中文。
@@ -163,7 +163,7 @@ antigravity-zh/
 │  ├─ build.py           asar 解析 / 重打包
 │  ├─ engine_body.js     DOM 翻译引擎
 │  ├─ rules.json         动态句式规则
-│  └─ dict/p1..p7.json   词典（1907 条）
+│  └─ dict/p1..p7.json   词典（1961 条）
 ├─ tools/                CDP 验证工具
 ├─ docs/说明.txt         面向普通用户的中文说明
 └─ screenshots/          效果截图
@@ -214,7 +214,7 @@ A：脚本目前只写了 Windows 路径探测；asar 结构相同，`build.py` 
 
 Community Simplified-Chinese localization for the **Google Antigravity** desktop client (Windows).
 
-The app ships an English-only web UI with no i18n hooks, so this project injects a runtime DOM translation engine into the renderer preload inside `resources/app.asar` — 1,907 hand-curated entries plus 45 regex rules, with code/terminal/editor areas explicitly skipped.
+The app ships an English-only web UI with no i18n hooks, so this project injects a runtime DOM translation engine into the renderer preload inside `resources/app.asar` — 1,961 hand-curated entries plus 58 regex rules, with code/terminal/editor areas explicitly skipped.
 
 **Install:** unzip a release, double-click `安装汉化.cmd` (install) or `还原英文.cmd` (restore).
 **After an app update:** run the installer again.
