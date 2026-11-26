@@ -48,7 +48,7 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 
 ### 方式一：双击 .bat（推荐，零依赖）
 
-1. 到 [Releases](../../releases) 下载 `Antigravity-一键汉化-v1.0.2.zip`，**完整解压**（不要把 .bat 单独拖出来）。
+1. 到 [Releases](../../releases) 下载 `Antigravity-zh-CN-v1.0.2.zip`，**完整解压**（不要把 .bat 单独拖出来）。
 2. 双击 `一键汉化.bat`，菜单里选 `1` 即安装 / 更新汉化，选 `2` 还原英文。
 3. 脚本自动定位安装目录、关闭客户端、备份官方文件、写入、校验、重启，全程无需 PowerShell / Python。
 
@@ -67,7 +67,7 @@ Google Antigravity 的界面是一个由本地 language server 提供的纯英�
 
 ### 方式二：脚本版（zip）
 
-1. 到 [Releases](../../releases) 下载 `Antigravity-一键汉化-v1.0.2.zip`。
+1. 到 [Releases](../../releases) 下载 `Antigravity-zh-CN-v1.0.2.zip`。
 2. **完整解压**（不要只把 `.cmd` 拖出来）。
 3. 双击 `安装汉化.cmd`，脚本会自动关闭客户端 → 备份 → 写入 → 重启。
 4. 界面即为简体中文。
